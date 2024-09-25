@@ -1,0 +1,40 @@
+# App configuration
+
+model_path: "app/models"
+
+default_model_sentiment: "lxyuan/distilbert-base-multilingual-cased-sentiments-student"
+
+default_embedding_model: 
+  model_name: "BAAI/bge-m3"
+  device: "mps"
+  normalize_embeddings: True
+
+llama-param:
+  gpu_layers: -1
+  n_batch: 1024
+
+llama_cpp_models:
+  mistral-7b-8q: "app/models/Mistral-7B-Instruct-v0.3.Q8_0.gguf" 
+
+chat_config:
+  chat_memory_length: 2
+  number_of_retrieved_documents: 3
+
+text_splitter:
+  chunk_size: 512  
+  chunk_overlap: 50  
+  separators: 
+    - "\n\n" 
+    - "\n"  
+    - " " 
+
+# https://grammar.intrinsiclabs.ai/
+grammar:
+  target_path: "app/grammar/target_grammar.gbnf"
+  score_path: "app/grammar/score_grammar.gbnf"
+
+chromadb:
+  chromadb_path: "chroma_db"
+
+chat_sessions_database_path: "app/chat_sessions/chat_sessions.db"
+chat_sessions_database_string: "sqlite:///app/chat_sessions/chat_sessions.db"

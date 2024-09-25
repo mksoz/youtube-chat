@@ -1,0 +1,9 @@
+# app/requirements.txt
+pyyaml
+matplotlib
+# Frontend and youtube handler
+google-api-python-client
+youtube-transcript-api
+streamlit
+numpy==1.26.0
+

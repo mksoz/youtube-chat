@@ -1,0 +1,24 @@
+# App settings
+
+youtube_api_key: "AIzaSyDcMRbXUphhVOoKozcETNbw1iHWrSgcFto"
+
+model_path: "./models"
+default_model_sentiment: "lxyuan/distilbert-base-multilingual-cased-sentiments-student"
+
+backend_url: "http://localhost:8000"
+
+download_model_docker: "http://host.docker.internal:8000/download-model"
+download_model_endpoint: "http://localhost:8000/download-model"
+list_models_docker: "http://host.docker.internal:8000/models"
+list_models_endpoint: "http://localhost:8000/models"
+run_model_docker: "http://host.docker.internal:8000/run-model"
+run_sentimental_model_docker: "http://host.docker.internal:8000/run-sentimental-model"
+run_sentimental_model_endpoint: "http://localhost:8000/run-sentimental-model"
+llm_endpoint: "http://localhost:8000/test-llm"
+
+chat_sessions_database_path: "./chat_sessions/chat_sessions.db"
+
+user_path: "app/chat_icons/user_image.png"
+bot_path: "app/chat_icons/bot_image.png"
+yt_icon: "app/chat_icons/yt_icone.png"
+
