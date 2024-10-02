@@ -37,3 +37,10 @@ def get_avatar(sender_type):
         return config['user_path']
     else:
        return config['bot_path']
+
+def format_duration(duration_in_seconds):
+    if isinstance(duration_in_seconds, (int, float)):
+        hours, remainder = divmod(int(duration_in_seconds), 3600)
+        minutes, seconds = divmod(remainder, 60)
+        return f"{hours:02}:{minutes:02}:{seconds:02}"
+    return str(duration_in_seconds)
