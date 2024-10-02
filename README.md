@@ -133,7 +133,7 @@ Once you have your API key, you need to add it to your project:
    
 ## Demo
 
-![Example](./demo/demo.gif)
+<img src="./demo/demo.gif" width="800px" />
 
 ## Notes & Troubleshooting
 1. GPU Usage
