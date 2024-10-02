@@ -1,6 +1,6 @@
 # **Youtube Chat**
 
-This project contains both a frontend and backend component that runs in separate terminal instances. The frontend uses **Streamlit** for a web interface, and the backend uses **FastAPI** with **Langgraph** and **Llama-CPP** for managing and executing AI workflows.
+This project contains both a frontend and backend component that runs in separate terminal instances. The frontend uses **Streamlit** for a web interface, and the backend uses **FastAPI** with **LangGraph** and **Llama-CPP** for managing and executing AI workflows.
 
 ## Prerequisites
 
@@ -113,17 +113,27 @@ Once you have your API key, you need to add it to your project:
     ```bash
     git clone
     ```
-2. Open a terminal, go to the cloned repository root path. Enter into terminal:
+2. Activate conda environment for each window terminal
+    ```bash
+    conda activate
+    ```
+3. Open a terminal, go to the cloned repository root path. Enter into terminal:
    ```bash
    cd llm_backend
+   chmod 777 setup_and_run.sh 
    ./setup_and_run.sh 
    ```
-3. Open a new terminal, go to the cloned repository root path. Enter into terminal:
+4. Open a new terminal, go to the cloned repository root path. Enter into terminal:
     ```bash
     cd chat_frontend
+    chmod 777 start.sh 
     ./start.sh
     ```
-4. **Once it is set up**, it will open automatically the user intarface otherwise go to http://localhost:8501
+5. **Once it is set up**, it will open automatically the user intarface otherwise go to http://localhost:8501
+   
+## Demo
+
+![Example](./demo/demo.gif)
 
 ## Notes & Troubleshooting
 1. GPU Usage
