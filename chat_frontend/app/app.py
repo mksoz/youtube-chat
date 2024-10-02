@@ -1,7 +1,7 @@
 import streamlit as st
 from googleapiclient.errors import HttpError
 from handlers import YouTubeHandler
-from utils import load_config, plot_sentiment_pie, get_avatar
+from utils import load_config, plot_sentiment_pie, get_avatar, format_duration
 import requests
 from html_templates import css
 
@@ -173,7 +173,7 @@ def add_session(youtube_handler, video_url):
                 "channel_title":video_info.get('channel_title',''),
                 "description":video_info.get('description',''),
                 "publish_date":video_info.get('published_at',''),
-                "duration":str(video_info.get('duration','')),
+                "duration":format_duration(video_info.get('duration','')),
                 "transcript": transcript,
                 "comments": comments,
                 "replace_existing":False
