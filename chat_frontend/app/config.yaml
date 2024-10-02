@@ -1,6 +1,6 @@
 # App settings
 
-youtube_api_key: "AIzaSyDcMRbXUphhVOoKozcETNbw1iHWrSgcFto"
+youtube_api_key: "your_api_key_here"
 
 model_path: "./models"
 default_model_sentiment: "lxyuan/distilbert-base-multilingual-cased-sentiments-student"
